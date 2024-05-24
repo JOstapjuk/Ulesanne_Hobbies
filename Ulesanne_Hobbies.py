@@ -106,6 +106,8 @@ def sort_people_and_hobbies(people_list: list) -> list:
     
     return sorted_people
 
+# Добавила свой метод
+
 def sort_people_by_age(people_list: list) -> list:
     """
     Return list of peoples names sorted ascending by their age
@@ -119,23 +121,29 @@ def sort_people_by_age(people_list: list) -> list:
 
 if __name__ == '__main__':
     person1 = Person("Mari", "Kukk", ["dancing", "biking", "programming"], 18)
-    person2 = Person("Jeff", "Bezos", ["money", "hair", "late_capitalism", "space", "unions"], 46)
-    person3 = Person("Elon", "Musk", ["late_capitalism", "space", "cars"], 50)
+    person2 = Person("Jeff", "Bezos", ["money", "hair", "late_capitalism", "space", "unions"], 60)
+    person3 = Person("Elon", "Musk", ["late_capitalism", "space", "cars"], 52)
     people = [person1, person2, person3]
 
-    print(sort_by_most_hobbies(people))  # -> [JeffBezos, ElonMusk, MariKukk]
+    print("People sorted by most hobbies")
+    print(sort_by_most_hobbies(people))  # -> [Jeff Bezos, Elon Musk, Mari Kukk]
     print()
-    print(sort_by_least_hobbies(people))   # -> [ElonMusk, MariKukk, JeffBezos]
+    print("People sorted by least hobbies")
+    print(sort_by_least_hobbies(people))   # -> [Elon Musk, Mari Kukk, Jeff Bezos]
     print()
-    print(filter_by_hobby(people, "space"))  # -> [ElonMusk, JeffBezos]
+    print("People who have a given hobbie in their list")
+    print(filter_by_hobby(people, "space"))  # -> [Elon Musk, Jeff Bezos]
     print()
+    print("People sorted by their full names and hobbies")
     sorted_people = sort_people_and_hobbies(people)
-    print(sorted_people)  # -> [ElonMusk, JeffBezos, MariKukk]
+    print(sorted_people)  # -> [Elon Musk, Jeff Bezos, Mari Kukk]
     for person in sorted_people:
         print(f"{person.full_name} hobbies: {person.hobbies}")
     print()
+    print("Hobbies of a person")
     print(person1.hobbies)  # -> ['biking', 'dancing', 'programming']
     print()
+    print("People sorted by their age")
     sorted_people_age = sort_people_by_age(people)
     print(sorted_people_age)
     for person in sorted_people_age:
