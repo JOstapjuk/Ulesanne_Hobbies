@@ -69,7 +69,7 @@ def sort_by_most_hobbies(people_list: list) -> list:
     :param people_list: list of people to sort.
     :return: sorted list of people.
     """
-    sorted_list = sorted(people_list, key=lambda person: (-len(person.hobbies), person.full_name))
+    sorted_list = sorted(people_list, key=lambda person: (-len(person.hobbies), person.full_name))   #key=lambda https://blogboard.io/blog/knowledge/python-sorted-lambda/
     return sorted_list
     
 
