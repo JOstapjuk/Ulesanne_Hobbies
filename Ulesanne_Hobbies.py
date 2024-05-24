@@ -129,21 +129,26 @@ if __name__ == '__main__':
     print("People sorted by most hobbies")
     print(sort_by_most_hobbies(people))  # -> [Jeff Bezos, Elon Musk, Mari Kukk]
     print()
+
     print("People sorted by least hobbies")
     print(sort_by_least_hobbies(people))   # -> [Elon Musk, Mari Kukk, Jeff Bezos]
     print()
+
     print("People who have a given hobbie in their list")
     print(filter_by_hobby(people, "space"))  # -> [Elon Musk, Jeff Bezos]
     print()
+
     print("People sorted by their full names and hobbies")
     sorted_people = sort_people_and_hobbies(people)
     print(sorted_people)  # -> [Elon Musk, Jeff Bezos, Mari Kukk]
     for person in sorted_people:
         print(f"{person.full_name} hobbies: {person.hobbies}")
     print()
+
     print("Hobbies of a person")
     print(person1.hobbies)  # -> ['biking', 'dancing', 'programming']
     print()
+
     print("People sorted by their age")
     sorted_people_age = sort_people_by_age(people)
     print(sorted_people_age)
