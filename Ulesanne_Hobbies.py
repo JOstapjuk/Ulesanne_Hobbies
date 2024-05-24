@@ -106,6 +106,16 @@ def sort_people_and_hobbies(people_list: list) -> list:
     
     return sorted_people
 
+def sort_people_by_age(people_list: list) -> list:
+    """
+    Return list of peoples names sorted ascending by their age
+
+    :param people_list: list of people to sort
+    :return: sorted list of people
+    """
+    sorted_people = sorted(people_list, key=lambda person: person.age)
+    return sorted_people
+
 
 if __name__ == '__main__':
     person1 = Person("Mari", "Kukk", ["dancing", "biking", "programming"], 18)
@@ -119,6 +129,14 @@ if __name__ == '__main__':
     print()
     print(filter_by_hobby(people, "space"))  # -> [ElonMusk, JeffBezos]
     print()
-    print(sort_people_and_hobbies(people))  # -> [ElonMusk, JeffBezos, MariKukk]
+    sorted_people = sort_people_and_hobbies(people)
+    print(sorted_people)  # -> [ElonMusk, JeffBezos, MariKukk]
+    for person in sorted_people:
+        print(f"{person.full_name} hobbies: {person.hobbies}")
     print()
     print(person1.hobbies)  # -> ['biking', 'dancing', 'programming']
+    print()
+    sorted_people_age = sort_people_by_age(people)
+    print(sorted_people_age)
+    for person in sorted_people_age:
+        print(f"{person.full_name} age: {person.age}")
