@@ -123,7 +123,8 @@ if __name__ == '__main__':
     person1 = Person("Mari", "Kukk", ["dancing", "biking", "programming"], 18)
     person2 = Person("Jeff", "Bezos", ["money", "hair", "late_capitalism", "space", "unions"], 60)
     person3 = Person("Elon", "Musk", ["late_capitalism", "space", "cars"], 52)
-    people = [person1, person2, person3]
+    person4 = Person("Kati", "Vuuola", ["programming","skiing","sleeping","eating"],25)
+    people = [person1, person2, person3,person4]
 
     print("People sorted by most hobbies")
     print(sort_by_most_hobbies(people))  # -> [Jeff Bezos, Elon Musk, Mari Kukk]
